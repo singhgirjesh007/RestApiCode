@@ -17,7 +17,9 @@ public class CommentidValidation {
 	public void jiraapicomment_test() {
 		
 		//Login seession
-		//SessionFilter api used for seesion 
+		//SessionFilter api used for seesion , it will store complete session and
+		//no need to paas auth key wiht this logic//
+		//other way login and extratc authkey throgh Json path
 		RestAssured.baseURI = "http://localhost:8080";
 		SessionFilter session = new SessionFilter();
 		given().header("Content-Type","application/json")
