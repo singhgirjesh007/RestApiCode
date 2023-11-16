@@ -71,6 +71,7 @@ public class OauthWithPojo {
 		
 		//Major file to support Pojo - jackson and gson for JSON file
 		//By just providing Java class - whole response will chnage and we can play with response with java logic
+		// .expect().defaultParser(Parser.JSON) - To parse in JSON contect as per header
 		
 		ParentCourseExample pojo_object =given().queryParam("access_token", access_token).expect().defaultParser(Parser.JSON).when()
 		.get("https://rahulshettyacademy.com/getCourse.php").as(ParentCourseExample.class);
